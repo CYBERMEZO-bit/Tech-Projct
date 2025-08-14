@@ -48,7 +48,7 @@ function updateCartPanel() {
         cartItem.className = 'cart-item';
         
         // Extract price number (remove $)
-        const priceNumber = parseFloat(item.price.replace('$', ''));
+        const priceNumber = parseFloat(item.price.replace('$', '').replace(',', ''));
         total += priceNumber;
         
         cartItem.innerHTML = `
