@@ -4,7 +4,7 @@ let cartCount = 0;
 
 // Load cart from localStorage
 function loadCart() {
-    cart = JSON.parse(localStorage.getItem('techgear_cart') || '[]');
+    cart = JSON.parse(localStorage.getItem('techgear_cart') || '[]'); // READ
     cartCount = cart.length;
     updateCartDisplay();
 }
@@ -83,10 +83,10 @@ function addToCart(productName, price) {
 
 // Remove from cart function
 function removeFromCart(index) {
-    cart.splice(index, 1);                                    // حذف من Array
-    cartCount--;                                              // تحديث العداد
-    updateCartDisplay();                                      // تحديث العرض
-    localStorage.setItem('techgear_cart', JSON.stringify(cart)); // حفظ مباشر
+    cart.splice(index, 1);                                    // remove from Array
+    cartCount--;                                              // update length
+    updateCartDisplay();                                      
+    localStorage.setItem('techgear_cart', JSON.stringify(cart)); // STORE
 }
 
 // Show notification
